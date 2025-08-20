@@ -1,0 +1,151 @@
+/*
+	Dies ist die css-Datei, in der das Layout des Graphen beschrieben ist.
+*/
+
+/*
+	Rahmen fuer den Graph, damit alle Knoten immer komplett sichtbar sind
+*/
+graph {
+	padding: 85px, 60px;
+}
+
+/*
+	Standardgroesse für Stellen und Transitionen
+*/
+node {
+	size: 40px;
+}
+
+/*
+	Style-Angabe für eine Stelle
+*/
+node.place {
+	shape: circle;
+	
+	fill-mode: plain;
+	fill-color: #a0cfd6;
+	
+	stroke-mode: plain;
+	/*stroke-color: #6CA6CD;*/
+	stroke-color: black;
+	stroke-width: 2px;
+
+	text-color: black;
+	text-size: 11;
+	text-alignment: under;
+	text-background-mode: rounded-box;
+	text-background-color: #a0cfd6;
+	text-padding: 2px;
+	text-offset: 0px, 10px ;
+}
+
+/*
+	Style-Angabe für eine aktivierte Transition
+*/
+node.transitionEnabled {
+	shape: box;
+
+	fill-mode: plain;
+	fill-color: #a4d5a6;
+
+	stroke-mode: plain;
+	/*stroke-color: green;*/
+	stroke-color: black;
+	stroke-width: 2px;
+
+	text-color: black;
+	text-size: 11;
+	text-alignment: under;
+	text-background-mode: rounded-box;
+	text-background-color: #a4d5a6;
+	text-padding: 2px;
+	text-offset: 0px, 10px;
+}
+
+/*
+	Style-Angabe für eine nicht-aktivierte Transition
+*/
+node.transitionNotEnabled {
+	shape: box;
+
+	fill-mode: plain;
+	fill-color: #D8A39B;
+
+	stroke-mode: plain;
+	stroke-color: black;
+	stroke-width: 2px;
+
+	text-color: black;
+	text-size: 11;
+	text-alignment: under;
+	text-background-mode: rounded-box;
+	text-background-color: #D8A39B;
+	text-padding: 2px;
+	text-offset: 0px, 10px;
+}
+
+/*
+	Style-Angabe fuer eine Kante
+*/
+edge {
+	fill-color: black;
+	text-color: black;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  11;
+}
+
+/*
+	Style-Angabe fuer ein Sprite, dass als Label für eine Kante benutzt wird
+*/
+sprite.edgeLabel {
+	shape: box;
+	/*fill-color: rgb(200, 255, 200);*/
+	/*size: 30,20;*/
+	text-size: 11;
+	text-alignment: center;
+	text-background-mode: rounded-box;
+	text-background-color: #e9efeb;
+	text-offset: 0px,-3px;
+	text-padding: 2px;
+}
+
+
+/*
+	Style-Angabe fuer ein Sprite, das eine Stelle hervorhebt
+*/
+sprite.place {
+	shape: circle;
+	size: 30px;
+	fill-mode: none;
+	stroke-mode: plain;
+	stroke-width: 2px;
+/*	z-index: 5;*/
+}
+
+
+/*
+	Style-Angabe fuer ein Sprite, das eine Transition hervorhebt
+*/
+sprite.transition {
+	shape: box;
+	size: 30px;
+	fill-mode: none;
+	stroke-mode: plain;
+	stroke-width: 2px;      		
+/*	z-index: 5;*/
+}
+
+/*
+	Style-Angabe für ein Sprite, das die Markenanzahl einer Stelle anzeigt
+*/
+sprite.token {
+	shape: circle;
+	fill-mode: none;
+	text-alignment: center;
+	text-color: black;
+	text-style: bold;
+	text-size: 14px;
+	text-offset: 0px, -5px;
+}
+

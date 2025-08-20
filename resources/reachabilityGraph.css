@@ -1,0 +1,107 @@
+/*
+	Dies ist die css-Datei, in der das Layout des Graphen beschrieben ist.
+*/
+
+/*
+	Rahmen fuer den Graph, damit alle Knoten immer komplett sichtbar sind
+*/
+graph {
+	padding: 80px;
+}
+
+/*
+	Style-Angabe fuer Knoten
+*/
+node {
+	size: 140px, 26px;
+	shape: box;
+	
+	fill-mode: plain;
+	fill-color: #e9efeb;
+	
+	stroke-mode: plain;
+	stroke-color: black;
+	stroke-width: 1px;
+
+	text-color: black;
+	text-size: 11px;
+	text-alignment: center;
+	text-background-mode: none;
+	text-padding: 4px;
+	text-offset: 0px, -4px;
+	
+}
+
+/*
+	Style-Angabe für den Wurzel-Knoten
+*/
+node.root {
+	fill-mode: plain;
+	fill-color: #9EABB3;
+	/*text-background-color: grey;*/
+}
+
+/*
+	Style-Angabe fuer eine Kante
+*/
+edge {
+	fill-color: black;
+	/*text-color: black;*/
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	/*text-size:  11;*/
+}
+
+/*
+	Style-Angabe fuer die Hervorhebung einer Kante
+*/
+edge.highlight {
+	fill-color: #559364;
+	arrow-size: 12px, 9px;
+}
+
+/*
+	Style-Angabe fuer eine Kante eines unbeschraenkten Pfades
+*/
+edge.path {
+	fill-color: #D36D88;
+}
+
+/*
+	Style-Angabe fuer ein Sprite, dass als Label für eine Kante benutzt wird
+*/
+sprite.edgeLabel {
+	shape: box;
+	text-size: 11;
+	text-alignment: center;
+	text-background-mode: rounded-box;
+	text-background-color: #e9efeb;
+	text-offset: 0px,-3px;
+	text-padding: 2px;
+}
+
+/*
+	Sprite fuer die Hervorhebung eines Knotens
+*/
+sprite.highlightNode {
+	shape: box;
+	size: 140px, 26px;
+	fill-mode: none;
+
+	stroke-mode: plain;
+	stroke-color: #559364;
+	stroke-width: 4px;
+}
+
+/*
+	Sprite fuer die Hervorhebung von m und m'
+*/
+sprite.highlightPath {
+	shape: box;
+	size:130px, 16px;
+	fill-mode: none;
+
+	stroke-mode: plain;
+	stroke-color: #D36D88;
+	stroke-width: 2px;
+}
